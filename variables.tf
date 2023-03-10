@@ -19,3 +19,12 @@ variable "data_storage_size_in_tbs" {
   type    = number
   default = 1
 }
+
+variable "tenancy_ocid" {}
+variable "user_ocid" {}
+#variable "private_key_path" {}
+variable "private_key" {}
+variable "compartment_ocid" {}
+variable "region" {}
+variable "fingerprint" {}
+variable "adb_password" {}
