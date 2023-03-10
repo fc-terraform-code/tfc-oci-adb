@@ -3,7 +3,7 @@ resource "oci_database_autonomous_database" "tf_adb" {
   cpu_core_count           = var.cpu_core_count
   data_storage_size_in_tbs = var.data_storage_size_in_tbs
   db_name                  = var.db_name
-  admin_password           = var.admin_password
+  admin_password           = var.admin_db_password
   db_version               = var.db_version
   db_workload              = var.db_workload
   display_name             = var.db_name
