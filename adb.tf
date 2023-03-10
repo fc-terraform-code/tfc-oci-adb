@@ -3,6 +3,7 @@
 
 #locals {
 #  adb_nsg_id    = (!var.use_existing_vcn && var.adb_private_endpoint) ? oci_core_network_security_group.adb_nsg[0].id : var.adb_nsg_id
+adb_nsg_id    = var.adb_nsg_id
 #  adb_subnet_id = (!var.use_existing_vcn && var.adb_private_endpoint) ? oci_core_subnet.adb_subnet[0].id : var.adb_subnet_id
 #}
 
