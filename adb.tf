@@ -9,26 +9,26 @@
 resource "oci_database_autonomous_database" "adb_database" {
   admin_password           = var.adb_password
   compartment_id           = var.compartment_ocid
-  cpu_core_count           = var.adb_database_cpu_core_count
-  data_storage_size_in_tbs = var.adb_database_data_storage_size_in_tbs
+  #cpu_core_count           = var.adb_database_cpu_core_count
+  #data_storage_size_in_tbs = var.adb_database_data_storage_size_in_tbs
   db_name                  = var.adb_database_db_name
-  db_version               = var.adb_database_db_version
-  data_safe_status         = var.adb_data_safe_status
-  db_workload              = var.adb_database_db_workload
+  #db_version               = var.adb_database_db_version
+  #data_safe_status         = var.adb_data_safe_status
+  #db_workload              = var.adb_database_db_workload
   display_name             = var.adb_database_display_name
-  freeform_tags            = var.adb_database_freeform_tags
-  license_model            = var.adb_database_license_model
+  #freeform_tags            = var.adb_database_freeform_tags
+  #license_model            = var.adb_database_license_model
   is_free_tier             = var.adb_free_tier
-  is_data_guard_enabled    = var.is_data_guard_enabled
-  is_auto_scaling_enabled  = var.is_auto_scaling_enabled
-  whitelisted_ips          = var.adb_private_endpoint ? null : var.whitelisted_ips
+  #is_data_guard_enabled    = var.is_data_guard_enabled
+  #is_auto_scaling_enabled  = var.is_auto_scaling_enabled
+  #whitelisted_ips          = var.adb_private_endpoint ? null : var.whitelisted_ips
   #nsg_ids                  = var.adb_private_endpoint ? [local.adb_nsg_id] : null
-  private_endpoint_label   = var.adb_private_endpoint ? var.adb_private_endpoint_label : null
+  #private_endpoint_label   = var.adb_private_endpoint ? var.adb_private_endpoint_label : null
   #subnet_id                = var.adb_private_endpoint ? local.adb_subnet_id : null
-  defined_tags             = var.defined_tags
-  lifecycle {
-    ignore_changes = [defined_tags["Oracle-Tags.CreatedBy"], defined_tags["Oracle-Tags.CreatedOn"]]
-  }
+  #defined_tags             = var.defined_tags
+  #lifecycle {
+  #  ignore_changes = [defined_tags["Oracle-Tags.CreatedBy"], defined_tags["Oracle-Tags.CreatedOn"]]
+  #}
 }
 
 resource "random_password" "wallet_password" {
