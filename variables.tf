@@ -27,4 +27,4 @@ variable "private_key" {}
 variable "compartment_ocid" {}
 variable "region" {}
 variable "fingerprint" {}
-variable "adb_password" {}
+#variable "adb_password" {}
