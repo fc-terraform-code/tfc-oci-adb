@@ -22,9 +22,9 @@ resource "oci_database_autonomous_database" "adb_database" {
   is_data_guard_enabled    = var.is_data_guard_enabled
   is_auto_scaling_enabled  = var.is_auto_scaling_enabled
   whitelisted_ips          = var.adb_private_endpoint ? null : var.whitelisted_ips
-  nsg_ids                  = var.adb_private_endpoint ? [local.adb_nsg_id] : null
+  #nsg_ids                  = var.adb_private_endpoint ? [local.adb_nsg_id] : null
   private_endpoint_label   = var.adb_private_endpoint ? var.adb_private_endpoint_label : null
-  subnet_id                = var.adb_private_endpoint ? local.adb_subnet_id : null
+  #subnet_id                = var.adb_private_endpoint ? local.adb_subnet_id : null
   defined_tags             = var.defined_tags
   lifecycle {
     ignore_changes = [defined_tags["Oracle-Tags.CreatedBy"], defined_tags["Oracle-Tags.CreatedOn"]]
