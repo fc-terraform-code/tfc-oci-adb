@@ -1,3 +1,4 @@
+#--Retrie password from OCI Vault
 data "oci_secrets_secretbundle" "bundle" {
   secret_id = var.admin_password
 }
