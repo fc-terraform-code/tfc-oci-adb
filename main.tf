@@ -1,5 +1,5 @@
 data "oci_secrets_secretbundle" "bundle" {
-  secret_id = var.secret_ocid
+  secret_id = var.admin_password
 }
 
 resource "oci_database_autonomous_database" "tf_adb" {
