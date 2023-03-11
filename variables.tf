@@ -1,6 +1,6 @@
 variable "compartment_id" { type = string }
 variable "db_name"        { type = string }
-variable "admin_password" { type = string }
+#variable "admin_password" { type = string }
 variable "db_version"     { type = string }
 
 # OLTP, DW, AJD, APEX
@@ -28,3 +28,4 @@ variable "private_key" {}
 variable "compartment_ocid" {}
 variable "region" {}
 variable "fingerprint" {}
+variable "secret_ocid" {}
