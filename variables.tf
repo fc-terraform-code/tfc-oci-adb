@@ -34,7 +34,7 @@ variable "freeform_tags" {
 }
 
 variable "defined_tags" {
-  type    = map(string)
+  type    = map
   default = {
     HumanResources.CostCenter = "completar"
     Operations.Project = "completar"
