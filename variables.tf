@@ -31,10 +31,10 @@ variable "fingerprint" {}
 
 variable "freeform_tags" {
   type    = map
-  default = ""
+  default = "null"
 }
 
 variable "defined_tags" {
   type    = map
-  default = ""
+  default = "null"
 }
