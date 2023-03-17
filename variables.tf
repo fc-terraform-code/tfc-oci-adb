@@ -37,3 +37,5 @@ variable "defined_tags" {
   type    = map
   default = {}
 }
+variable "tag_namespace_name" {}
+variable "identity_tag_name" {}
