@@ -1,4 +1,18 @@
-#--Retrie password from OCI Vault
+resource "oci_identity_tag_namespace" "tag_namespace" {
+  compartment_id = var.compartment_id
+  description    = "Namespace for adding labels"
+  name           = var.tag_namespace_name
+}
+
+resource "oci_identity_tag" "identity_tag" {
+    description = "Label tag used for adding labels"
+    name = var.identity_tag_name
+    tag_namespace_id = oci_identity_tag_namespace.tag_namespace.id
+    is_cost_tracking = false
+    is_retired = false
+}
+
+#--Take password from OCI Vault
 data "oci_secrets_secretbundle" "bundle" {
   secret_id = var.admin_password
 }
@@ -17,4 +31,8 @@ resource "oci_database_autonomous_database" "tf_adb" {
   license_model            = var.license_model
   freeform_tags            = var.freeform_tags
   defined_tags             = var.defined_tags
+  
+  depends_on = [
+    oci_identity_tag.identity_tag
+  ]
 }
