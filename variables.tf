@@ -30,11 +30,14 @@ variable "region" {}
 variable "fingerprint" {}
 
 variable "freeform_tags" {
-  type    = map(string)
-  default = ""
+  type    = map
 }
 
 variable "defined_tags" {
   type    = map(string)
-  default = ""
+  default = {
+    HumanResources.CostCenter = "completar"
+    Operations.Project = "completar"
+    HumanResources.Environment = "completar"
+  }
 }
