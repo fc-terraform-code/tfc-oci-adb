@@ -32,3 +32,7 @@ variable "fingerprint" {}
 variable "freeform_tags" {
   type    = map
 }
+
+variable "defined_tags" {
+  type    = map
+}
