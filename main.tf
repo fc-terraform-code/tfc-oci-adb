@@ -16,4 +16,5 @@ resource "oci_database_autonomous_database" "tf_adb" {
   is_free_tier             = var.is_free_tier
   license_model            = var.license_model
   freeform_tags            = var.freeform_tags
+  defined_tags             = var.defined_tags
 }
