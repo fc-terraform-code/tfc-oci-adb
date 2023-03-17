@@ -30,11 +30,11 @@ variable "region" {}
 variable "fingerprint" {}
 
 variable "freeform_tags" {
-  type    = map
-  default = "null"
+  type    = map(string)
+  default = ""
 }
 
 variable "defined_tags" {
-  type    = map
-  default = "null"
+  type    = map(string)
+  default = ""
 }
