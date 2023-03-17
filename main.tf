@@ -35,4 +35,11 @@ resource "oci_database_autonomous_database" "tf_adb" {
   depends_on = [
     oci_identity_tag.identity_tag
   ]
+  
+  lifecycle {
+    ignore_changes = [
+      defined_tags["Oracle-Tags.CreatedBy"],
+      defined_tags["Oracle-Tags.CreatedOn"]
+    ]
+  }
 }
