@@ -28,3 +28,7 @@ variable "private_key" {}
 variable "compartment_ocid" {}
 variable "region" {}
 variable "fingerprint" {}
+
+variable "freeform_tags" {
+  type    = map
+}
