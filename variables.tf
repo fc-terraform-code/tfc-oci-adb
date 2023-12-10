@@ -45,3 +45,8 @@ variable "identity_tag_name" {
   type    = string
   default = ""
 }
+
+variable "is_mtls_connection_required" {
+  type    = bool
+  default = null
+}
