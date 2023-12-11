@@ -46,10 +46,10 @@ variable "identity_tag_name" {
   default = ""
 }
 
-#variable "is_access_control_enabled" {
-#  type    = bool
-#  default = null
-#}
+variable "is_access_control_enabled" {
+  type    = bool
+  default = null
+}
 
 variable "whitelisted_ips" {
   default = [""]
