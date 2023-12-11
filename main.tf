@@ -31,8 +31,8 @@ resource "oci_database_autonomous_database" "tf_adb" {
   license_model            = var.license_model
   freeform_tags            = var.freeform_tags
   defined_tags             = var.defined_tags
-  is_access_control_enabled = var.is_access_control_enabled
-  #whitelisted_ips           = var.whitelisted_ips
+  #is_access_control_enabled = var.is_access_control_enabled
+  whitelisted_ips           = var.whitelisted_ips
   
   depends_on = [
     oci_identity_tag.identity_tag
