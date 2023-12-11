@@ -50,3 +50,7 @@ variable "is_mtls_connection_required" {
   type    = bool
   default = null
 }
+
+variable "whitelisted_ips" {
+  default = [""]
+}
