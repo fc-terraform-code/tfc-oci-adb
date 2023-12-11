@@ -46,11 +46,7 @@ variable "identity_tag_name" {
   default = ""
 }
 
-variable "is_access_control_enabled" {
-  type    = bool
-  default = null
-}
-
 variable "whitelisted_ips" {
+  description = "Set Network 'Access control list' & 'Mutual TLS (mTLS) authentication'"
   default = [""]
 }
