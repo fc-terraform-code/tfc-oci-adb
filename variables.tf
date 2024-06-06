@@ -12,15 +12,15 @@ variable "is_free_tier"   { type = string }
 # BRING_YOUR_OWN_LICENSE or LICENSE_INCLUDED
 variable "license_model"  { type = string }
 
-variable "cpu_core_count" {
-  type    = number
-  default = 1
-}
+#variable "cpu_core_count" {
+#  type    = number
+#  default = 1
+#}
 
-variable "data_storage_size_in_tbs" {
-  type    = number
-  default = 1
-}
+#variable "data_storage_size_in_tbs" {
+#  type    = number
+#  default = 1
+#}
 
 variable "tenancy_ocid" {}
 variable "user_ocid" {}
